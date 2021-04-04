@@ -1,24 +1,26 @@
-# README
+# アプリケーション名
+Solve (ソルヴ)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+仕事の依頼者と受注者のマッチングアプリです。
 
-Things you may want to cover:
+# 利用方法
+自分だけでは大変な仕事や手伝って欲しい作業を依頼でき、依頼を受注すると報酬が得られます。仕事の依頼や受注にはユーザー登録が必要となります。依頼の一覧や詳細はログインしなくても閲覧可能です。
 
-* Ruby version
+# 目指した課題解決
+畑の収穫量が多く一人では困難な場合の手助けの依頼や、冬場の雪国における高齢者の屋根の雪下ろしの代行など、体力的、また季節的なものによる作業の手助けといった課題の解決を目指しています。
 
-* System dependencies
+# 洗い出した要件
+### ユーザー管理機能
+### 仕事依頼機能
+### 依頼一覧表示機能
+### 依頼詳細表示機能
+### 依頼編集機能
+### 依頼削除機能
+### 依頼受注機能
+### マイページ機能
+### コメント機能
 
-* Configuration
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/fe6b213a321f60aa70fb73efed270636.png)](https://gyazo.com/fe6b213a321f60aa70fb73efed270636)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
