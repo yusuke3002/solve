@@ -24,3 +24,59 @@ Solve (ソルヴ)
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/fe6b213a321f60aa70fb73efed270636.png)](https://gyazo.com/fe6b213a321f60aa70fb73efed270636)
 
+# テーブル設計
+
+## users テーブル
+
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| username           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| last_name          | string | null: false               |
+| first_name         | string | null: false               |
+| last_name_ruby     | string | null: false               |
+| first_name_ruby    | string | null: false               |
+| birth              | date   | null: false               |
+
+### Association
+- has_many :requests
+- has_many :accepts
+- has_many :comments
+
+## requests
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | null: false                    |
+| content    | text       | null: false                    |
+| area       | string     | null: false                    |
+| date       | string     | null: false                    |
+| time       | string     | null: false                    |
+| reward     | string     | null: false                    |
+| user       | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_one :accept
+- has_many :comments
+
+## accepts
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| user       | references | null: false, foreign_key: true |
+| request    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :request
+
+## comments
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| comment    | text       | null: false                    |
+| user       | references | null: false, foreign_key: true |
+| request    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :request
